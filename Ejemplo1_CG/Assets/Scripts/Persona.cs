@@ -7,7 +7,7 @@ using System.IO.Pipes;
 
 namespace PackagePersona
 {
-
+    [Serializable]
     public class Persona 
     {
 
