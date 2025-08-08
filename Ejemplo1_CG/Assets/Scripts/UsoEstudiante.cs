@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using PackagePersona; 
-using System.Collections.Generic;  
 using TMPro; // Ensure you have TextMeshPro package installed
 
 public class UsoEstudiante : MonoBehaviour
@@ -25,18 +24,20 @@ public class UsoEstudiante : MonoBehaviour
         listaE.Add(new Estudiante("2024_01", "Ing Sistemas", "Camilo López", "clopez@uao.edu.co", "Pasoancho"));
 
         MostrarEstudiante(indiceActual);
-    }
 
+        Utilidades.GuardarEstudiantesJSON(listaE, "estudiantes");
+
+    }
     public void MostrarEstudiante(int index)
     {
         if (index >= 0 && index < listaE.Count)
         {
             Estudiante estudiante = listaE[index];
-            Codigo.text = "Nombre: " + estudiante.NameP;
-            Carrera.text = "Correo: " + estudiante.MailP;
-            Nombre.text = "Dirección: " + estudiante.DirP;
-            Correo.text = "Código: " + estudiante.CodeE;
-            Direccion.text = "Carrera: " + estudiante.NameCarreraE;
+            Codigo.text = "Nombre: " + estudiante.CodeE;
+            Carrera.text = "Correo: " + estudiante.NameCarreraE;
+            Nombre.text = "Dirección: " + estudiante.NameP;
+            Correo.text = "Código: " + estudiante.MailP;
+            Direccion.text = "Carrera: " + estudiante.DirP;
         }
     }
 
