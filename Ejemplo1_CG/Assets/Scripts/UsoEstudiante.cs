@@ -33,11 +33,11 @@ public class UsoEstudiante : MonoBehaviour
         if (index >= 0 && index < listaE.Count)
         {
             Estudiante estudiante = listaE[index];
-            Codigo.text = "Nombre: " + estudiante.CodeE;
-            Carrera.text = "Correo: " + estudiante.NameCarreraE;
-            Nombre.text = "Dirección: " + estudiante.NameP;
-            Correo.text = "Código: " + estudiante.MailP;
-            Direccion.text = "Carrera: " + estudiante.DirP;
+            Codigo.text = "Codigo: " + estudiante.CodeE;
+            Carrera.text = "Carrera: " + estudiante.NameCarreraE;
+            Nombre.text = "Nombre: " + estudiante.NameP;
+            Correo.text = "Correo: " + estudiante.MailP;
+            Direccion.text = "Direccion: " + estudiante.DirP;
         }
     }
 
