@@ -7,10 +7,11 @@ using System;
 namespace PackagePersona
 {
     [System.Serializable]
-    public class Estudiante : Persona
+    public class Estudiante: Persona
     {
         public string codeE;
         public string nameCarreraE;
+        
 
         public Estudiante()
         {
@@ -21,6 +22,7 @@ namespace PackagePersona
         {
             this.codeE = codeE;
             this.nameCarreraE = nameCarreraE;
+            
         }
         public string CodeE { get => codeE; set => codeE = value; }
         public string NameCarreraE { get => nameCarreraE; set => nameCarreraE = value; }

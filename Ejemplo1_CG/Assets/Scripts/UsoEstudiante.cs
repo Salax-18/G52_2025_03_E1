@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using PackagePersona; 
-using TMPro; // Ensure you have TextMeshPro package installed
+using TMPro;
 
 public class UsoEstudiante : MonoBehaviour
 {
@@ -21,7 +21,7 @@ public class UsoEstudiante : MonoBehaviour
     {
         listaE.Add(new Estudiante("2025_03", "Ing Multimedia", "David Castro", "dacastro@uao.edu.co", "Carrera 34"));
         listaE.Add(new Estudiante("2023_03", "Ing Industrial", "Maria Perez", "merez@uao.edu.co", "Calle 14"));
-        listaE.Add(new Estudiante("2024_01", "Ing Sistemas", "Camilo López", "clopez@uao.edu.co", "Pasoancho"));
+        listaE.Add(new Estudiante("2024_02", "Ing Sistemas", "Camilo López", "clopez@uao.edu.co", "Pasoancho"));
 
         MostrarEstudiante(indiceActual);
 

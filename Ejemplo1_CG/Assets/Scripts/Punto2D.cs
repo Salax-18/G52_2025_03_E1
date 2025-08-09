@@ -9,8 +9,8 @@ namespace Package2D
 
     public class Punto2D
     {
-        private double x;
-        private double y;
+        public double x;
+        public double y;
 
 
         public Punto2D()
