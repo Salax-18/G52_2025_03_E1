@@ -6,18 +6,32 @@ using UnityEngine;
 public class UsoPunto2D : MonoBehaviour
 {
     private List<Punto2D> listaPuntos = new List<Punto2D>();
+    private Vector3 ultimaPosicion;
+    
 
-    void Start()
+
+    void Update()
     {
-        listaPuntos.Add(new Punto2D(1.0, 2.0));
-        listaPuntos.Add(new Punto2D(-4.0, 3.0));
-        listaPuntos.Add(new Punto2D(-3.7, 0.5));
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
 
-        double distancia = listaPuntos[0].Distancia(listaPuntos[1]);
-        Debug.Log("Distancia entre los puntos X y Y: " + distancia);
 
-        
-        Utilidades.GuardarPuntosJSON(listaPuntos, "puntos2D");
+        if (Vector3.Distance(mousePos, ultimaPosicion) > 50f)
+        {
+            ultimaPosicion = mousePos;
+
+            Punto2D nuevoPunto = new Punto2D(worldPos.x, worldPos.y);
+            listaPuntos.Add(nuevoPunto);
+
+            Debug.Log("Punto guardado " + worldPos.x + ", " + worldPos.y);
+        }
+    }
+
+    public void GuardarPuntosButton()
+    {
+        Utilidades.GuardarPuntosJSON(listaPuntos, "puntosRegistrados");
+        Debug.Log("Puntos guardados.");
     }
 }
+
 

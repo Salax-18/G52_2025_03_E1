@@ -1,0 +1,16 @@
+{
+    "estudiantes": [
+        {
+            "codeE": "2025_03",
+            "nameCarreraE": "Ing Multimedia"
+        },
+        {
+            "codeE": "2023_03",
+            "nameCarreraE": "Ing Industrial"
+        },
+        {
+            "codeE": "2024_02",
+            "nameCarreraE": "Ing Sistemas"
+        }
+    ]
+}
