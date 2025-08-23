@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 
-public class Cola : MonoBehaviour
+public class ColaPersona : MonoBehaviour
 {
    
     public TMP_InputField NombrePersona;
